@@ -43,17 +43,23 @@ const PriorityPicker: React.FC<IProps> = ({ onChange, value }) => {
     ));
   }, [value, handleSelectPriority]);
 
-  React.useEffect(() => {
-    const handleClickOutside = (e: any) => {
-      if (ref.current && !ref.current.contains(e.target)) {
+  const handleClickOutside = React.useCallback(
+    (e: MouseEvent) => {
+      const el = e.currentTarget;
+
+      if (el instanceof Node && ref.current && !ref.current.contains(el)) {
         handleVisibleFalse();
       }
-    };
+    },
+    [handleVisibleFalse]
+  );
+
+  React.useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
     return function cleanup() {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [ref, handleVisibleFalse]);
+  }, [handleClickOutside]);
 
   return (
     <Container ref={ref}>

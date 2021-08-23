@@ -35,17 +35,23 @@ const ThemePicker: React.FC<IProps> = ({ theme, setTheme }) => {
     setTheme(theme);
   };
 
-  React.useEffect(() => {
-    const handleClickOutside = (e: any) => {
-      if (ref.current && !ref.current.contains(e.target)) {
+  const handleClickOutside = React.useCallback(
+    (e: MouseEvent) => {
+      const el = e.currentTarget;
+
+      if (el instanceof Node && ref.current && !ref.current.contains(el)) {
         handleClose();
       }
-    };
+    },
+    [handleClose]
+  );
+
+  React.useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
     return function cleanup() {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [ref]);
+  }, [handleClickOutside]);
 
   return (
     <ThemePickerContainer ref={ref}>
