@@ -45,7 +45,7 @@ const PriorityPicker: React.FC<IProps> = ({ onChange, value }) => {
 
   const handleClickOutside = React.useCallback(
     (e: MouseEvent) => {
-      const el = e.currentTarget;
+      const el = e.target;
 
       if (el instanceof Node && ref.current && !ref.current.contains(el)) {
         handleVisibleFalse();

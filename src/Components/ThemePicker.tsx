@@ -37,7 +37,7 @@ const ThemePicker: React.FC<IProps> = ({ theme, setTheme }) => {
 
   const handleClickOutside = React.useCallback(
     (e: MouseEvent) => {
-      const el = e.currentTarget;
+      const el = e.target;
 
       if (el instanceof Node && ref.current && !ref.current.contains(el)) {
         handleClose();
