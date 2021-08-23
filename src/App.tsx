@@ -8,7 +8,6 @@ import {
   Footer,
   Header,
 } from "./styled-components";
-import { ThemeProvider } from "styled-components";
 import ThemePicker from "./Components/ThemePicker";
 import SubmitItemForm from "./Components/SubmitItemForm";
 import usePersistedState from "./use-persisted-state";
