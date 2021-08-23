@@ -16,7 +16,7 @@ import Theme from "./Providers/Theme";
 const initialTodos: Todo[] = todos;
 
 const App = () => {
-  const [todos, setTodos] = usePersistedState("todos", initialTodos);
+  const [todos, setTodos] = usePersistedState("tasks", initialTodos);
   const [filter, setFilter] = React.useState<TFilterKey>("Active");
   const [theme, setTheme] = usePersistedState("themes", themes["blueTheme"]);
 
