@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/typescript-tutorial/static/css/main.a617e044.chunk.css",
-    "main.js": "/typescript-tutorial/static/js/main.1716ecaf.chunk.js",
-    "main.js.map": "/typescript-tutorial/static/js/main.1716ecaf.chunk.js.map",
+    "main.js": "/typescript-tutorial/static/js/main.37b04d50.chunk.js",
+    "main.js.map": "/typescript-tutorial/static/js/main.37b04d50.chunk.js.map",
     "runtime-main.js": "/typescript-tutorial/static/js/runtime-main.0c958ada.js",
     "runtime-main.js.map": "/typescript-tutorial/static/js/runtime-main.0c958ada.js.map",
     "static/js/2.cbfabb56.chunk.js": "/typescript-tutorial/static/js/2.cbfabb56.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.0c958ada.js",
     "static/js/2.cbfabb56.chunk.js",
     "static/css/main.a617e044.chunk.css",
-    "static/js/main.1716ecaf.chunk.js"
+    "static/js/main.37b04d50.chunk.js"
   ]
 }
