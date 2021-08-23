@@ -29,6 +29,7 @@ const TodosList: React.FC<IProps> = ({
       <Container>
         {todos.filter(FILTER_MAP[filter]).map((todo: Todo) => (
           <TodoItem
+            key={todo.id}
             todo={todo}
             completeTodo={completeTodo}
             removeTodo={removeTodo}
@@ -38,10 +39,6 @@ const TodosList: React.FC<IProps> = ({
       </Container>
     );
   }, [filter, todos, completeTodo, removeTodo, editTodo]);
-
-  React.useEffect(() => {
-    renderTodosList();
-  }, [renderTodosList]);
 
   return (
     <Container>
