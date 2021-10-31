@@ -60,19 +60,22 @@ const SubmitItemForm: React.FC<IProps> = ({ addTodo }) => {
 
   return (
     <Container>
-      <SubmitItemButton onClick={handleOpenClose}>+</SubmitItemButton>
+      <SubmitItemButton data-automation="form-btn" onClick={handleOpenClose}>
+        +
+      </SubmitItemButton>
       <Modal isOpen={open} style={customStyles} overlayClassName="overlay">
         <SubmitForm>
-          <Input value={title} onChange={handleChange} placeholder="Add task" />
+          <Input value={title} onChange={handleChange} placeholder="Add task" data-automation="submit-form-input" />
           <PriorityPickerContainer>
             <PriorityPicker
               onChange={selectPriorityOption}
               value={selectedPriorityOption}
+              data-automation="priority-picker"
             />
           </PriorityPickerContainer>
           <SubmitFormButtonsContainer>
             {title ? (
-              <AddButton onClick={handleSubmitTodo}>Add task</AddButton>
+              <AddButton onClick={handleSubmitTodo} data-automation="add-btn">Add task</AddButton>
             ) : (
               <AddButton
                 onClick={handleSubmitTodo}
@@ -82,7 +85,7 @@ const SubmitItemForm: React.FC<IProps> = ({ addTodo }) => {
                 Add task
               </AddButton>
             )}
-            <CancelButton onClick={handleOpenClose}>Cancel</CancelButton>
+            <CancelButton onClick={handleOpenClose} data-automation="cancel-btn">Cancel</CancelButton>
           </SubmitFormButtonsContainer>
         </SubmitForm>
       </Modal>
