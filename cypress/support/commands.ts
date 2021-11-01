@@ -19,3 +19,7 @@ Cypress.Commands.add("createTodo", () => {
   cy.wait(500);
   cy.get('[data-automation="add-btn"]').click();
 });
+
+Cypress.Commands.add("filter", () => {
+  cy.get('[data-automation="filter-btn"]').click({ multiple: true });
+});

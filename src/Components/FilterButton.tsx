@@ -14,6 +14,7 @@ const FilterButton: React.FC<IProps> = ({ item, isPressed, setFilter }) => {
       type="button"
       aria-pressed={isPressed}
       onClick={() => setFilter(item)}
+      data-automation="filter-btn"
     >
       {item}
     </FiltersButton>
