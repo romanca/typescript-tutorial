@@ -37,6 +37,7 @@ const PriorityPicker: React.FC<IProps> = ({ onChange, value }) => {
       <PriorityPickerCollapsiblePanelItem
         onClick={() => handleSelectPriority(priority)}
         isSelected={priority === value}
+        data-automation="priority"
       >
         {priority}
       </PriorityPickerCollapsiblePanelItem>
