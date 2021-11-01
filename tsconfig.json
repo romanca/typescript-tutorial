@@ -1,7 +1,9 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "types": ["cypress"],
+    "types": [
+      "cypress"
+    ],
     "lib": [
       "es5",
       "dom",
@@ -24,6 +26,7 @@
   },
   "include": [
     "src",
-    "**/*.ts"
-, "cypress/integration/e2e/submit.spec.js"  ]
+    "**/*.ts",
+    "cypress/integration/e2e/submit.spec.js"
+  ]
 }

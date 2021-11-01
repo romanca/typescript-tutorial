@@ -63,7 +63,10 @@ const PriorityPicker: React.FC<IProps> = ({ onChange, value }) => {
 
   return (
     <Container ref={ref}>
-      <PriorityPickerButton onClick={handleVisible}>
+      <PriorityPickerButton
+        onClick={handleVisible}
+        data-automation="priority-picker"
+      >
         {value || priorities[3]}
       </PriorityPickerButton>
       {visible && (

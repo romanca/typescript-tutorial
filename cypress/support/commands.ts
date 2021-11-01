@@ -1,0 +1,21 @@
+Cypress.Commands.add("createTodo", () => {
+  cy.get('[data-automation="form-btn"]').click().click().click();
+  cy.wait(500);
+  cy.get('[data-automation="submit-form-input"]').type("Todo 6");
+  cy.wait(500);
+  cy.get('[data-automation="priority-picker"]').click();
+  cy.wait(500);
+  cy.get(".sc-bBHxTw > :nth-child(1)").click();
+  cy.wait(500);
+  cy.get('[data-automation="cancel-btn"]').click();
+  cy.wait(500);
+  cy.get('[data-automation="form-btn"]').click();
+  cy.wait(500);
+  cy.get('[data-automation="submit-form-input"]').type("Todo 6");
+  cy.wait(500);
+  cy.get('[data-automation="priority-picker"]').click();
+  cy.wait(500);
+  cy.get(".sc-bBHxTw > :nth-child(1)").click();
+  cy.wait(500);
+  cy.get('[data-automation="add-btn"]').click();
+});

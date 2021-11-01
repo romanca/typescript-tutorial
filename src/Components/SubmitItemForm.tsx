@@ -37,6 +37,8 @@ const SubmitItemForm: React.FC<IProps> = ({ addTodo }) => {
   const [selectedPriorityOption, setSelectedPriorityOption] =
     React.useState<string>(priorities[3]);
 
+  console.log(selectedPriorityOption);
+
   const selectPriorityOption = (priority: string) => {
     setSelectedPriorityOption(priority);
   };
@@ -54,6 +56,12 @@ const SubmitItemForm: React.FC<IProps> = ({ addTodo }) => {
     setSelectedPriorityOption(priorities[3]);
   };
 
+  const handleCancel = () => {
+    setTitle("");
+    handleOpenClose();
+    setSelectedPriorityOption("");
+  };
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setTitle(e.target.value);
   };
@@ -65,17 +73,23 @@ const SubmitItemForm: React.FC<IProps> = ({ addTodo }) => {
       </SubmitItemButton>
       <Modal isOpen={open} style={customStyles} overlayClassName="overlay">
         <SubmitForm>
-          <Input value={title} onChange={handleChange} placeholder="Add task" data-automation="submit-form-input" />
+          <Input
+            value={title}
+            onChange={handleChange}
+            placeholder="Add task"
+            data-automation="submit-form-input"
+          />
           <PriorityPickerContainer>
             <PriorityPicker
               onChange={selectPriorityOption}
               value={selectedPriorityOption}
-              data-automation="priority-picker"
             />
           </PriorityPickerContainer>
           <SubmitFormButtonsContainer>
             {title ? (
-              <AddButton onClick={handleSubmitTodo} data-automation="add-btn">Add task</AddButton>
+              <AddButton onClick={handleSubmitTodo} data-automation="add-btn">
+                Add task
+              </AddButton>
             ) : (
               <AddButton
                 onClick={handleSubmitTodo}
@@ -85,7 +99,9 @@ const SubmitItemForm: React.FC<IProps> = ({ addTodo }) => {
                 Add task
               </AddButton>
             )}
-            <CancelButton onClick={handleOpenClose} data-automation="cancel-btn">Cancel</CancelButton>
+            <CancelButton onClick={handleCancel} data-automation="cancel-btn">
+              Cancel
+            </CancelButton>
           </SubmitFormButtonsContainer>
         </SubmitForm>
       </Modal>
