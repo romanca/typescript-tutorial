@@ -4,5 +4,6 @@ declare namespace Cypress {
     filter(): Chainable<Element>;
     priorityPicker(): Chainable<Element>;
     themePicker(): Chainable<Element>;
+    todoItem(): Chainable<Element>;
   }
 }

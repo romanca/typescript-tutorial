@@ -70,7 +70,7 @@ const TodoItem: React.FC<TodoIProps> = ({
   return (
     <Container>
       <TodoItemContainer>
-        <CheckBoxContainer>
+        <CheckBoxContainer data-automation="checkbox">
           {!todo.complete ? (
             <CheckCircleOutlineRoundedIcon
               style={{
@@ -130,7 +130,11 @@ const TodoItem: React.FC<TodoIProps> = ({
         <TodoButtonsContainer>
           <TodoToggleButtonContainer>
             {!toggleTodo ? (
-              <EditIcon color="primary" onClick={handleToggleTodo} />
+              <EditIcon
+                color="primary"
+                onClick={handleToggleTodo}
+                data-automation="edit-btn"
+              />
             ) : (
               <CheckCircleRoundedIcon
                 style={{ color: "green" }}

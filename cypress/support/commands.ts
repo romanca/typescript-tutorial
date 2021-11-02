@@ -69,3 +69,42 @@ Cypress.Commands.add("themePicker", () => {
   cy.wait(500);
   cy.get('[data-automation="theme-panel"] > li').eq(0).click();
 });
+
+Cypress.Commands.add("todoItem", () => {
+  cy.wait(1000);
+  cy.get(
+    ":nth-child(1) > .sc-iCfMLu > .sc-kDTinF > :nth-child(1) > .MuiSvgIcon-root"
+  ).click();
+  cy.wait(500);
+  cy.get(
+    ":nth-child(1) > .sc-iCfMLu > .sc-kDTinF > :nth-child(2) > .MuiSvgIcon-root"
+  ).click();
+  cy.wait(500);
+  cy.get(
+    ":nth-child(1) > .sc-iCfMLu > .sc-kDTinF > :nth-child(1) > .MuiSvgIcon-root"
+  ).click();
+  cy.wait(500);
+  cy.get('[data-automation="priority-picker"]').click();
+  cy.wait(500);
+  cy.get(".sc-bBHxTw > :nth-child(1)").click();
+  cy.wait(500);
+  cy.get(
+    ":nth-child(1) > .sc-iCfMLu > .sc-jrQzAO > .sc-kfPuZi > .sc-egiyK"
+  ).type("Todo 12");
+  cy.wait(500);
+  cy.get(
+    ":nth-child(1) > .sc-iCfMLu > .sc-kDTinF > :nth-child(1) > .MuiSvgIcon-root > path"
+  ).click();
+  cy.wait(500);
+  cy.get(
+    ":nth-child(1) > .sc-iCfMLu > .sc-kDTinF > :nth-child(2) > .MuiSvgIcon-root"
+  ).click();
+  cy.wait(500);
+  cy.get(":nth-child(1) > .sc-iCfMLu > .sc-furwcr > .MuiSvgIcon-root").click();
+  cy.wait(500);
+  cy.get(".sc-hGPBjI > :nth-child(3)").click();
+  cy.wait(500);
+  cy.get(":nth-child(1) > .sc-iCfMLu > .sc-furwcr > .MuiSvgIcon-root").click();
+  cy.wait(500);
+  cy.get(".sc-hGPBjI > :nth-child(1)").click();
+});
