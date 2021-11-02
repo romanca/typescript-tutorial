@@ -27,7 +27,7 @@ export const ButtonTitle = styled.div`
   font-weight: 700;
 `;
 
-export const ThemePickerPanel = styled.div`
+export const ThemePickerPanel = styled.ul`
   border: 1px solid grey;
   border-radius: 5px;
   width: 250px;
@@ -37,6 +37,8 @@ export const ThemePickerPanel = styled.div`
   display: flex;
   flex-wrap: wrap;
   background: white;
+  list-style-type: none;
+  padding-left: 0px;
 `;
 
 export const ThemeTitle = styled.span`
@@ -48,11 +50,10 @@ export const ThemeTitle = styled.span`
   font-size: 12px;
 `;
 
-export const ThemeButton = styled.div`
+export const ThemeButton = styled.li`
   flex: 1 0 33%;
   margin: 3px;
   border: 1px solid grey;
-  width: 100%;
   border-radius: 5px;
   cursor: pointer;
 `;

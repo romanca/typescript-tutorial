@@ -43,3 +43,29 @@ Cypress.Commands.add("priorityPicker", () => {
   cy.wait(500);
   cy.get(".sc-bBHxTw > :nth-child(4)").click();
 });
+
+Cypress.Commands.add("themePicker", () => {
+  cy.get('[data-automation="theme-btn"]').click();
+  cy.wait(500);
+  cy.get('[data-automation="theme-panel"] > li').eq(1).click();
+  cy.wait(500);
+  cy.get('[data-automation="theme-btn"]').click();
+  cy.wait(500);
+  cy.get('[data-automation="theme-panel"] > li').eq(2).click();
+  cy.wait(500);
+  cy.get('[data-automation="theme-btn"]').click();
+  cy.wait(500);
+  cy.get('[data-automation="theme-panel"] > li').eq(3).click();
+  cy.wait(500);
+  cy.get('[data-automation="theme-btn"]').click();
+  cy.wait(500);
+  cy.get('[data-automation="theme-panel"] > li').eq(4).click();
+  cy.wait(500);
+  cy.get('[data-automation="theme-btn"]').click();
+  cy.wait(500);
+  cy.get('[data-automation="theme-panel"] > li').eq(5).click();
+  cy.wait(500);
+  cy.get('[data-automation="theme-btn"]').click();
+  cy.wait(500);
+  cy.get('[data-automation="theme-panel"] > li').eq(0).click();
+});

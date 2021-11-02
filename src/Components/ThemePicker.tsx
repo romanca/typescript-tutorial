@@ -56,7 +56,7 @@ const ThemePicker: React.FC<IProps> = ({ theme, setTheme }) => {
   return (
     <ThemePickerContainer ref={ref}>
       {open ? (
-        <ThemePickerPanel>
+        <ThemePickerPanel data-automation="theme-panel">
           {Object.values(themes).map((item: Theme) => (
             <ThemeButton
               style={{ background: item.itemTheme }}
@@ -71,6 +71,7 @@ const ThemePicker: React.FC<IProps> = ({ theme, setTheme }) => {
       <ThemePickerButton
         onClick={handleOpenCLose}
         style={{ background: open ? theme.itemTheme : null }}
+        data-automation="theme-btn"
       >
         <PaletteOutlinedIcon />
         <ButtonTitle>Themes</ButtonTitle>
