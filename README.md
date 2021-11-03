@@ -14,7 +14,7 @@ https://romanca.github.io/typescript-tutorial/
 - Typescript
 - Cypress(end-to-end testing automation)
 
-### Functionality
+# Functionality
 
 - Creating todos
 - Editing todos
