@@ -6,4 +6,4 @@ https://romanca.github.io/typescript-tutorial/
 
 React,Typescript,Cypress(end-to-end testing automation)
 
-![Screenshot](img1.png)
+![Screenshot](./src/shared/img1.png)
